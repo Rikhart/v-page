@@ -44,7 +44,7 @@
         props: ['setting'],
         data(){
             let config = Object.assign({}, defaults, this.setting);
-            let i18n = languages[config.language];
+            let i18n = config.i18n||languages[config.language];
 
             return {
                 config: config,
